@@ -1,0 +1,113 @@
+<?xml version="1.0" ?>
+
+<!--
+ Chameleon app specific style file
+-->
+
+<style>
+
+  <include href="core/style.xml"/>
+  <include href="common/icon_templates.xml"/>
+  <include href="common/style.xml"/>
+
+  <!-- About Dialog -->
+  <widget name="AboutDialogChameleon">
+    <metric name="LeftMargin" value="82"/>
+    <metric name="RightMargin" value="29"/>
+    <metric name="TopMargin" value="98"/>
+    <metric name="BottomMargin" value="46"/>
+    <metric name="VersionLabelPosX" value="146"/>
+    <metric name="VersionLabelPosY" value="450"/>
+  </widget>
+  
+  <color name="AboutDialogCaptionColor" value=".2;.2;.2;1" />
+  <color name="AboutDialogCaptionShadow" value="1;1;1;.6" />
+  <color name="CPFontColor" value=".254;.254;.254;1" />
+  <color name="CPFontDropColor" value="1;1;1;1" />
+  
+  <font name="AboutDialogFont" family="Helvetica Neue;LucidaGrande;Arial;segoeui;Helvetica;Tahoma;sans-serif;Chalkboard" size="11" />
+  <icon subrect="0;0;687;532" name="AboutDialogIconChameleon" img="aboutscreen.png" /> 
+  <icon subrect="0;0;107;124" name="BetaRibbon" img="Beta-badge 111219-mst.png" /> 
+   
+  <!-- Control point test icons -->
+  <part name="CPSizeSlider">
+    <state name="normal">
+	  <icon name="cpeffect-size" pos="center;center;0;0"/>
+    </state>
+    <state name="pressed" tinting="1;1;1;0.4">
+	  <use state="normal" /> 
+    </state>
+  </part>
+  
+  <font name="CPFont" family="Helvetica Neue;LucidaGrande;Arial;segoeui;Helvetica;Tahoma;sans-serif;Chalkboard" size="12" bold="1" no_subpix="1"/>
+  <font name="CPSliderFont" family="Helvetica Neue;LucidaGrande;Arial;segoeui;Helvetica;Tahoma;sans-serif;Chalkboard" size="11" bold="1">
+    <lang code="ja;jp" family="Hiragino Kaku Gothic Pro;Meiryo;メイリオ;MS UI Gothic;MS PGothic" size="12"/>
+    <lang code="zhc;zh_CN" family="ST Heiti;SimSun;PMingLiU" size="11"/>
+    <lang code="zht;zh_TW" family="LiHei Pro;PMingLiU;SimSun" size="11"/>
+  </font>
+  
+  <part name="CPSliderLabel">
+    <state name="normal">
+      <text font="CPSliderFont" margin="0;1;0;-1" color="0.0;0.0;0.0;0.35" flags="left;middle" />
+      <text font="CPSliderFont" margin="0;-1;0;1" color="0.0;0.0;0.0;0.35" flags="left;middle" />
+      <text font="CPSliderFont" margin="1;0;-1;0" color="0.0;0.0;0.0;0.35" flags="left;middle" />
+      <text font="CPSliderFont" margin="-1;0;1;0" color="0.0;0.0;0.0;0.35" flags="left;middle" />
+      <text font="CPSliderFont" margin="0;0;0;0" color="1.0;1.0;1.0;0.8" flags="left;middle" />
+	</state>
+  </part>
+  
+  <part name="CPSliderBase">
+    <state name="normal">
+	  <icon name="cpeffect-empty" pos="center;center;0;0"/>
+      <text font="CPFont" margin="1.5;0.5;0;0" color="CPFontDropColor" flags="center;middle" />
+      <text font="CPFont" margin="1.5;0.5;0;1" color="CPFontColor" flags="center;middle" />
+    </state>
+    <state name="pressed" tinting="1;1;1;0.4">
+	  <use state="normal" /> 
+    </state>
+  </part>
+
+  <part name="BottomBarButtonCaption">
+    <substate>
+      <state name="normal">
+        <text font="Bold" margin="0;1;0;-1" flags="center;bottom" color="1;1;1;0.5" />
+        <text font="Bold" flags="center;bottom" color="0.1;0.1;0.1;1" />
+      </state>
+      <state name="activated">
+        <use state="normal" />
+      </state>
+		<state name="disabled" tinting="1;1;1;0.5">
+          <use state="normal" />
+        </state>
+    </substate>
+    <substate>
+        <state name="pressed"></state>
+        <state name="focused"></state>
+    </substate>
+    <substate>
+        <state name="hover"></state>
+    </substate>
+    <state name="normal.disabled" tinting="1;1;1;0.5">
+      <use state="normal" />
+    </state>
+  </part>
+  
+  <part name="BottomBarButton">
+    <substate>
+      <state name="normal">
+      </state>
+      <state name="activated">
+      </state>
+    </substate>
+    <substate>
+      <state name="focused" />
+      <state name="pressed" />
+    </substate>
+    <substate>
+      <state name="hover" />
+    </substate>
+    <state name="normal.disabled" tinting="1;1;1;0.6"><use state="normal" /></state>
+    <state name="activated.disabled" tinting="1;1;1;0.6"><use state="activated" /></state>
+  </part>
+  
+</style>
